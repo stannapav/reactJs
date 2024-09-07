@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function Footer(){
+function Footer() {
   return (
     <>
-    <footer><small>Made by Anna Striharchuk</small></footer>
+      <footer>
+        <small>Made by Anna Striharchuk</small>
+      </footer>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
