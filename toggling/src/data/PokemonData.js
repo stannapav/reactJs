@@ -9,7 +9,6 @@ const pokemons = [
     imagePath:
       "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png",
     linkToPokedex: "https://www.pokemon.com/us/pokedex/bulbasaur",
-    isObtained: false,
   },
   {
     id: 2,
@@ -21,7 +20,6 @@ const pokemons = [
     imagePath:
       "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/018.png",
     linkToPokedex: "https://www.pokemon.com/us/pokedex/pidgeot",
-    isObtained: false,
   },
   {
     id: 3,
@@ -33,7 +31,6 @@ const pokemons = [
     imagePath:
       "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png",
     linkToPokedex: "https://www.pokemon.com/us/pokedex/squirtle",
-    isObtained: true,
   },
   {
     id: 4,
@@ -45,7 +42,6 @@ const pokemons = [
     imagePath:
       "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/132.png",
     linkToPokedex: "https://www.pokemon.com/us/pokedex/ditto",
-    isObtained: false,
   },
 ];
 
