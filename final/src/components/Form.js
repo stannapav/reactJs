@@ -14,7 +14,7 @@ function Form(props) {
     isFairy: false,
   });
 
-  const [pokemonsFilter, setPokemonsFilter] = useState([]);
+  const [pokemonsFilter, setPokemonsFilter] = useState(props.pokemons);
 
   function handleChange(event) {
     const { name, checked } = event.target;
@@ -24,11 +24,24 @@ function Form(props) {
     }));
   }
 
-  function handleFilter() {}
+  function handleFilter() {
+    const selectedTypes = Object.keys(type)
+      .filter((key) => type[key])
+      .map((key) => key.replace("is", ""));
 
-  const pokemonElements = props.pokemons.map((pokemon) => {
-    return <Pokemon key={pokemon.name} item={pokemon} {...pokemon} />;
-  });
+    const filteredPokemons = props.pokemons.filter((pokemon) =>
+      pokemon.type.some((pokeType) => selectedTypes.includes(pokeType))
+    );
+
+    setPokemonsFilter(filteredPokemons);
+
+    if (selectedTypes.length >= 1) setPokemonsFilter(filteredPokemons);
+    else setPokemonsFilter(props.pokemons);
+  }
+
+  const pokemonElements = pokemonsFilter.map((pokemon) => (
+    <Pokemon key={pokemon.name} item={pokemon} {...pokemon} />
+  ));
 
   return (
     <>
